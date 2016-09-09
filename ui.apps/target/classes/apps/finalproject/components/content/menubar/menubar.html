@@ -1,0 +1,43 @@
+<head data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}">
+    <css data-sly-call="${clientLib.css @ categories='finalproject.menubar'}" data-sly-unwrap></css>
+</head>
+
+<div class="container">
+     <ul  id="ntop" data-sly-use.topnav="topnav.js" data-sly-list="${topnav.items}" >
+
+     <li > <a  href="${item.page.path}.html">${item.page.title}</a> 
+
+      <ul class="subs" data-sly-list="${item.page.listChildren}" data-sly-test="${itemList.count > 0}" >
+
+ 	  <span id="s2"> </span>  						<li>
+															<ul>   
+                                                         		<li><a href="${item.path}.html">${item.title}
+
+                                                         		     <ul  data-sly-list="${ item.listChildren }" data-sly-test="${itemList.count > 0}">
+
+                                                           					<span id="spn"> </span> 
+																			<li>
+																			<ul>   
+                                                         					<li><a href="${item.path}.html">${item.title}</li>
+																			</ul></li>
+                                                                      </ul>      
+</a>
+
+                                                         </li> 
+
+
+    														</ul>   </li>
+
+                                </ul> 
+
+
+
+
+	</li>
+	</ul>
+</div>
+
+
+
+
+

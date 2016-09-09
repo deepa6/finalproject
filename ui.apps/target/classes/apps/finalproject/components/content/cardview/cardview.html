@@ -1,0 +1,45 @@
+<head data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}">
+<css data-sly-call="${clientLib.css @ categories='finalproject.cardview'}" data-sly-unwrap></css>
+</head>
+
+<div class="w3-container">
+<div style="width:100%;" data-sly-test.cnt="${properties.jcr:title @ context='number'}" data-sly-test.cc="0">
+
+<ul  data-sly-list="${cnt} > ${cc}">
+
+${cnt} > ${cc}
+
+<li style="width:20%; float:left; margin-left:10px;">
+
+<div class="w3-card-4" >
+
+<header class="w3-container w3-blue">
+  <h1>Header</h1>
+</header>
+
+<div class="w3-container">
+  <p></p>
+  <p><button class="w3-btn w3-dark-grey">Button</button></p>
+</div>
+
+<footer class="w3-container w3-blue">
+  <h5>Footer</h5>
+</footer>
+
+</div>
+
+
+</li>
+</ul>
+
+</div>
+</div>
+
+
+<dl  data-sly-list="${[1,2,3,4]}">
+<dt> index : ${itemList.index} </dt>
+<dd> value : ${item.title} </dd>
+
+<dl>
+
+

@@ -1,0 +1,17 @@
+
+<head data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}">
+    <css data-sly-call="${clientLib.css @ categories='finalproject.herobanner'}" data-sly-unwrap></css>
+</head>
+
+
+
+<h2>${ properties['jcr:title'] } </h2>
+<div class="hero-bg ${ properties['alignment']} " data-sly-test.iurl="${'{0}{1}' @ format=[currentNode.path,'/file/jcr:content']}" style="background-image:url(${iurl @ context = 'uri'})" >
+
+  <div class="hero-content"  >
+    <h2>${ properties['alt'] }</h2>
+
+     <dl data-sly-test="${properties['hideDisplayButton'] == 'true'}">
+    <a class="btn" href="${properties['ButtonURL']}.html" >${ properties['buttontext']}</a>  </dl>
+  </div>
+</div>

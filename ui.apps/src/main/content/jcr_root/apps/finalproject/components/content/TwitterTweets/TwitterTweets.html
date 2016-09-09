@@ -1,0 +1,39 @@
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+
+<css data-sly-call="${clientLib.css @ categories=['finalproject.twittertweets']}" data-sly-unwrap/> </css>  </head>
+<js data-sly-call="${clientLib.js @ categories=['finalproject.twittertweets']}" data-sly-unwrap/> </js>
+<dl data-sly-use.info1="org.sixdimensions.finalproject.core.models.Info"  data-sly-test.sbvalue="${info1.sbb}"> </dl>    
+
+<div  style="display:inline-block;">
+
+<div id="header${sbvalue}">
+<p><b>Twitter Tweets</b></p>
+</div>
+
+<div id="twittertweet">
+
+
+
+ <input type="hidden" id="searchval${sbvalue}" value="${ properties['jcr:search'] @ context = 'text' }">
+
+ <input type="hidden" id="tweetsnum${sbvalue}" value="${ properties['jcr:tweets'] @ context = 'number' }">
+
+ <input type="hidden" id="classval" value="${sbvalue}">
+
+
+
+<div id="jstwitter" class="${sbvalue}">
+
+</div>
+<div id="footer">
+<a href = "javascript:void(0);" class="white" onClick = "loadMoreTweets('${sbvalue @ context = 'text' }');" >Load Latest</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+

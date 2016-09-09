@@ -1,0 +1,2 @@
+#base=js
+locationpicker.jquery.min.js

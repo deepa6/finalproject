@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/org.sixdimensions.finalproject.core.servlets.NewReadTweetsServlet">
+    <OCD id="org.myorg.slingcurd.core.servlets.NewReadTweetsServlet" name="%org.myorg.slingcurd.core.servlets.NewReadTweetsServlet.name" description="%org.myorg.slingcurd.core.servlets.NewReadTweetsServlet.description"/>
+    <Designate pid="org.myorg.slingcurd.core.servlets.NewReadTweetsServlet">
+        <Object ocdref="org.myorg.slingcurd.core.servlets.NewReadTweetsServlet"/>
+    </Designate>
+</metatype:MetaData>

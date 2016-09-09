@@ -1,0 +1,33 @@
+
+<div>
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+<js data-sly-call="${clientLib.js @ categories=['finalproject.searchnew']}" data-sly-unwrap/> </js>
+<css data-sly-call="${clientLib.css @ categories=['finalproject.searchnew']}" data-sly-unwrap/> </css>  </head>
+<div style="display:inline-block;width:95%;">
+  
+          <p>   Enter String to Search  </p> <input type="text" value=""  id="v1"/>
+
+         	 <input type="button" value="Submit"  name="submit" class="submit">
+
+
+
+  <table id="example" class="display" cellspacing="0" width="80%">
+        <thead>
+            <tr>
+                <th>Selections</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tfoot>
+                <tr>
+                <th>Selections</th>
+                <th>Name</th>
+                </tr>
+        </tfoot>
+        <tbody id="tb">
+
+        </tbody>
+    </table>
+</div>
+</div>
+

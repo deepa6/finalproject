@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Widget"
+    sling:resourceType="granite/ui/components/foundation/form/select"
+    fieldDescription="set background color"
+    fieldLabel="setbackground"
+    name="./background">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <black
+            jcr:primaryType="nt:unstructured"
+            text="black"
+            value="black"/>
+        <bisque
+            jcr:primaryType="nt:unstructured"
+            text="bisque"
+            value="bisque"/>
+        <azure
+            jcr:primaryType="nt:unstructured"
+            text="azure"
+            value="azure"/>
+    </items>
+</jcr:root>

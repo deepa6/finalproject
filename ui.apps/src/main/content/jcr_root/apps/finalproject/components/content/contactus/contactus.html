@@ -1,0 +1,39 @@
+<style>
+h1 { color: #d04764; font-family: 'Lobster', cursive; font-size: 36px; font-weight: normal; line-height: 48px; margin: 0 0 18px; text-shadow: 1px 0 0 #fff; }
+
+
+h2 { color: #2CA4B0; font-family: 'Oleo Script', cursive; font-size: 24px; font-weight: normal; line-height: 32px; margin: 0 0 18px; text-shadow: 1px 0 0 #fff; }
+
+
+p { color: #333; font-family: 'Original Surfer', cursive; font-size: 16px; line-height: 28px; margin: 0 0 24px; }
+
+
+a { color: #d04764; font-family: 'Original Surfer', cursive; }
+
+
+a:hover { text-decoration: underline }
+
+</style>
+
+ <div data-sly-use.cus="org.sixdimensions.finalproject.core.models.ContactUSModel" style="display:inline-block;width:95%;">
+  <h1><i style="text-transform: capitalize;">${cus.lowerCaseTitle}</i></h1>
+
+ <dl data-sly-test.iurl="${'{0}{1}' @ format=[currentNode.path,'/file/jcr:content']}"> </dl>
+
+ <dl data-sly-test.iurls="${properties.fileReference ? '1' : '2' }" > </dl>
+
+
+<div data-sly-test="${iurls == '1'}">
+  <img class="textimage-image" align="${properties.align}" style"height:${properties.height}; width:${properties.width}; "src= ${properties.fileReference}>
+</div>
+
+<div data-sly-test="${iurls == '2'}">
+    <img class="textimage-image" align="${properties.align}" src= ${iurl}>
+</div>
+
+<div>
+ <p align="left">${cus.lowerCaseDescription @ context='html'}</p>
+</div>
+
+</div>
+

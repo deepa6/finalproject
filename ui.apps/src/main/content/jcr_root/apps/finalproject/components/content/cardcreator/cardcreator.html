@@ -1,0 +1,45 @@
+<div>
+    
+<head data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}">
+    <css data-sly-call="${clientLib.css @ categories='finalproject.cardcreator'}"></css>
+</head> 
+
+
+<div class="w3-container" style="width:100%;" >
+<div style="float:left; margin:0px;" data-sly-use.topnav="card.js" data-sly-list="${topnav.items}">
+
+<ul style="width:20%; float:left; margin:0px; list-style: none;">
+
+<li>
+
+
+<div class="w3-card-4" >
+
+<header class="w3-container w3-blue" style="background-color:${ properties['background'] @ context = 'html' }">
+  <h3 style="text-align:center">${item.page.title}</h3>
+</header>
+
+<div class="w2-container wrap" >
+<iframe class="frame" width="100%" height="300px" src="${item.page.path}/_jcr_content/par.html" name="iframe_a"></iframe></div>
+<div class="w1-container" style="text-align:center; background-color:${ properties['background'] @ context = 'html' }" >
+<a class="button" style= "margin:10px;" href= "${item.page.path}.html" >View</a>
+ <footer class="w3-container w3-blue" style="background-color:${ properties['background'] @ context = 'html'};">
+</div>
+
+
+
+
+
+
+  <h5>${ properties['description']}</h5>
+</footer>
+
+</div>
+
+
+</li>
+</ul>
+
+
+</div> 
+</div>

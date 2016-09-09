@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/org.sixdimensions.finalproject.core.servlets.SearchServiceString">
+    <OCD id="org.myorg.qbservletexample.core.servlets.SearchServiceString" name="%org.myorg.qbservletexample.core.servlets.SearchServiceString.name" description="%org.myorg.qbservletexample.core.servlets.SearchServiceString.description"/>
+    <Designate pid="org.myorg.qbservletexample.core.servlets.SearchServiceString">
+        <Object ocdref="org.myorg.qbservletexample.core.servlets.SearchServiceString"/>
+    </Designate>
+</metatype:MetaData>

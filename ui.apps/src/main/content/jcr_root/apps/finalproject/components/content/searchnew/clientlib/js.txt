@@ -1,0 +1,3 @@
+#base=js
+searchnew.min.js
+searchnew.js
