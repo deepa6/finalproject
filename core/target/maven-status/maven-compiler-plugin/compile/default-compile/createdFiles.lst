@@ -1,3 +1,4 @@
+org\sixdimensions\finalproject\core\models\NewRunDeleteEvent.class
 org\sixdimensions\finalproject\core\servlets\SimpleServlet.class
 org\sixdimensions\finalproject\core\models\HelloWorldModel.class
 org\sixdimensions\finalproject\core\package-info.class
@@ -6,6 +7,7 @@ org\sixdimensions\finalproject\core\servlets\NewTwitterTweetsServlet.class
 org\sixdimensions\finalproject\core\models\TwitterTweetsModel.class
 org\sixdimensions\finalproject\core\servlets\NewReadTweetsServlet.class
 org\sixdimensions\finalproject\core\models\Info.class
+org\sixdimensions\finalproject\core\servlets\NewDeleteNodeServlet.class
 org\sixdimensions\finalproject\core\filters\LoggingFilter.class
 org\sixdimensions\finalproject\core\listeners\SimpleResourceListener.class
 org\sixdimensions\finalproject\core\models\ReadService.class

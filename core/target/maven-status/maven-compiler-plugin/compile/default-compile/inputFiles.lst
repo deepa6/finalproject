@@ -7,11 +7,13 @@ C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensi
 C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\servlets\NewReadTweetsServlet.java
 C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\schedulers\SimpleScheduledTask.java
 C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\models\ReadService.java
+C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\servlets\NewDeleteNodeServlet.java
 C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\servlets\SimpleServlet.java
 C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\servlets\TwitterTweetsServlet.java
 C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\models\ContactUSModel.java
 C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\servlets\NewTwitterTweetsServlet.java
 C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\package-info.java
 C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\filters\LoggingFilter.java
+C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\models\NewRunDeleteEvent.java
 C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\models\TwitterTweetsModel.java
 C:\Users\Deepa.Chennuri\workspace\finalproject\core\src\main\java\org\sixdimensions\finalproject\core\models\NewSaveTweetsModel.java

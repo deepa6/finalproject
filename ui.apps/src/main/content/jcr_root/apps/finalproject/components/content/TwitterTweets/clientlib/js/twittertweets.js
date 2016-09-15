@@ -174,7 +174,7 @@ function parseDate(str) {
 
 function loadLatestTweet(searchval,tweetsnum,cval){
 
-   // alert(searchval+tweetsnum+cval);
+    //alert(searchval+tweetsnum+cval);
 
 	//cnt = cnt + 1;
     //alert("call loadLatesttweet count ="+cnt);

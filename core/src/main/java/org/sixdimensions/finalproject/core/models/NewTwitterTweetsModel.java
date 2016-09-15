@@ -227,6 +227,7 @@ public static Object fetchTimelineTweet(String query, int count) throws IOExcept
 
 	    LOG.debug("inside fetchTimelineTweet query {}", query );
 	    LOG.debug("inside fetchTimelineTweet request {}", req );
+	    LOG.debug("inside fetchTimelineTweet count {}", count );
 	    
 	    String baseURL = "https://api.twitter.com/1.1/search/tweets.json";
 	    String endPointUrl = baseURL + "?q=" + query + "&f=tweets&count=" + count;

@@ -79,6 +79,10 @@
     </profiles>
     <dependencies>
         <!-- OSGi Dependencies -->
+        
+         
+        
+        
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.scr</artifactId>
@@ -148,7 +152,9 @@
            <version>1.7.6</version>
      </dependency>
 
-
+   
+         
+         
 
        <dependency>
         <groupId>xerces</groupId>

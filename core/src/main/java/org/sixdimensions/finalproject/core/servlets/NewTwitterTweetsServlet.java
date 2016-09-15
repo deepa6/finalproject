@@ -26,6 +26,7 @@ import org.apache.sling.commons.json.JSONArray;
 import org.apache.sling.commons.json.JSONException;
 import org.apache.sling.commons.json.JSONObject;
 import org.apache.sling.commons.json.io.JSONWriter;
+import org.sixdimensions.finalproject.core.models.NewRunDeleteEvent;
 import org.sixdimensions.finalproject.core.models.NewRunTweetsModel;
 import org.sixdimensions.finalproject.core.models.NewSaveTweetsModel;
 import org.sixdimensions.finalproject.core.models.NewTwitterTweetsModel;
@@ -153,7 +154,9 @@ public class NewTwitterTweetsServlet extends org.apache.sling.api.servlets.Sling
 				 //LOG.debug("tweetNode request::::: ", request);	
 				 
 				 if (startJobcnt == 1){
+					 
 				 NewRunTweetsModel nr = new NewRunTweetsModel(queryStr,request);
+				 NewRunDeleteEvent nrd = new NewRunDeleteEvent();
 				 startJobcnt = startJobcnt + 1;
 				 LOG.debug("startJobcnt value {}", startJobcnt);
 				 }
@@ -170,7 +173,9 @@ public class NewTwitterTweetsServlet extends org.apache.sling.api.servlets.Sling
 		
 		
 		  public void destroy() {
+			  
 			 startJobcnt = 0;
+			 LOG.debug("destroy startJobcnt value {}", startJobcnt);
 			  }
 
 		

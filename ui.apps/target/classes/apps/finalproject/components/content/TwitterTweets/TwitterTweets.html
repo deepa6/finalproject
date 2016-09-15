@@ -4,6 +4,17 @@
 <js data-sly-call="${clientLib.js @ categories=['finalproject.twittertweets']}" data-sly-unwrap/> </js>
 <dl data-sly-use.info1="org.sixdimensions.finalproject.core.models.Info"  data-sly-test.sbvalue="${info1.sbb}"> </dl>    
 
+<!-- 
+<div data-sly-test.author="${wcmmode.edit || wcmmode.design}">
+    Show this to the author
+</div>
+<div data-sly-test="${!author}">
+      Not in author mode anymore.. 
+    <js data-sly-call="${clientLib.js @ categories=['finalproject.twittertweets']}" data-sly-unwrap/> </js>
+</div>
+-->
+
+
 <div  style="display:inline-block;">
 
 <div id="header${sbvalue}">
@@ -20,7 +31,7 @@
 
  <input type="hidden" id="classval" value="${sbvalue}">
 
-
+ <input type="hidden" id="sval" value="${ properties['jcr:search'] @ context = 'text' }">
 
 <div id="jstwitter" class="${sbvalue}">
 

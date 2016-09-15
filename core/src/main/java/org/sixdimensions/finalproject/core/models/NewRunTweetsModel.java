@@ -76,7 +76,7 @@ public class NewRunTweetsModel implements java.lang.Runnable, ReadService {
 public String updateTweets(ComponentContext componentContext){
 	
 	
-	String queryStr = null;
+	  String queryStr = null;
 	  Map<String,Object> paramMap = new HashMap<String,Object>();
       //Mention the subServiceName you had used in the User Mapping
       paramMap.put(ResourceResolverFactory.SUBSERVICE, "readService");
@@ -188,7 +188,7 @@ public String updateTweets(ComponentContext componentContext){
 			  			 
 			  			LOG.debug("difference in time in minutes d2:" + diffMinutes);
 			  			 
-			  			if(diffMinutes >= 2){ 
+			  			if(diffMinutes >= 15){ 
 			  			LOG.debug("Time difference is 15 mins");	
 			  			str =  (String) NewTwitterTweetsModel.fetchTimelineTweet1(this.reqObj,tweetNode,100);
 			  			//LOG.debug("fetchTimelineTweet1 value:" + str);
@@ -262,7 +262,9 @@ boolean runConcurrently = true;
 			    };
 
 try {
+	
 this.scheduler.addJob("myJob", job, config1, schedulingExpression, runConcurrently);
+	
 } catch (Exception e) {
 job.run();
 }

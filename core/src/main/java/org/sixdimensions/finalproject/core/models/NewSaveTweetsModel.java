@@ -105,7 +105,7 @@ public class NewSaveTweetsModel implements  ReadService {
 		
 	}
 	
-	public static String readTweetsTime(SlingHttpServletRequest req,String search) throws Exception { 
+	/*public static String readTweetsTime(SlingHttpServletRequest req,String search) throws Exception { 
 		
 		try{
 							         
@@ -125,7 +125,7 @@ public class NewSaveTweetsModel implements  ReadService {
 
 			  }	
 		
-	}
+	}  */
 	
 	
 	public String loadFetchTweets(SlingHttpServletRequest req,String search,int count) throws Exception {
