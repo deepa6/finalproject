@@ -28,6 +28,24 @@
                         fieldDescription="Maximum number of items displayed in list"
                         fieldLabel="#tweets"
                         name="./jcr:tweets"/>
+                    <headerfooterbgcolor
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Enter #code "
+                        fieldLabel="HeaderBgColor"
+                        name="./jcr:hbgcolor"/>
+                    <textbgcolor
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Enter color name"
+                        fieldLabel="TextBgColor"
+                        name="./jcr:tbgcolor"/>
+                    <contentbgcolor
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Enter #code"
+                        fieldLabel="ContentBgColor"
+                        name="./jcr:bbgcolor"/>
                 </items>
             </column>
         </items>

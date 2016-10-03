@@ -12,7 +12,6 @@ alert(tweetsclass);
  var cnt = 0;
 */
 
-
 $(document).ready(function() {
 
 //    $(function() {
@@ -27,8 +26,12 @@ $.each( divt, function( key, value ) {
    var tmp = id.substr ( id.indexOf ( 'header' ) + 6 ); //alert(tmp);
 
 
+var tcol = $('#tcolor'+tmp).val();
+    //alert('tcolor'+tcolor);
      var  ss = $('#searchval'+tmp).val();
      var tt = $('#tweetsnum'+tmp).val();
+
+    // var tbgcolor = $('#tcolor'+tmp).val();
 
     //alert("ss"+ss);
     //alert("tt"+tt);
@@ -39,7 +42,7 @@ $.each( divt, function( key, value ) {
 	 // if ( yaxis == 'undefined' ) yaxis =4;
 
 
-loadLatestTweet(ss,tt,tmp);
+loadLatestTweet(ss,tt,tmp,tcol);
 
    /* var sum = 0;
 var arr = [ 1, 2, 3, 4, 5 ];
@@ -172,7 +175,10 @@ function parseDate(str) {
     return new Date(Date.parse(v[1]+" "+v[2]+", "+v[5]+" "+v[3]+" UTC"));
 } 
 
-function loadLatestTweet(searchval,tweetsnum,cval){
+function loadLatestTweet(searchval,tweetsnum,cval,tcol){
+//alert('from loadlatest'+tcol);
+
+//tcol ="#9A3225";
 
     //alert(searchval+tweetsnum+cval);
 
@@ -219,11 +225,24 @@ function loadLatestTweet(searchval,tweetsnum,cval){
 */
 
     for(var i = 0; i< data.length; i++){
+    	
+    	 if (parseInt(data[0].code) == 34)
+         {
 
-        var image = data[i].user.profile_image_url; //alert(image);
 
-            var tweetStart = '<div class="row"><img src="'+image+'"/>'
-            var tweet = '<p class="white">'+data[i].text +'<p>';
+             tweet = '<div id="uppercase bold" class="white">'+data[i].message+'</div>'
+             $("."+cval).append('<p>'+tweet+'</p>');
+
+         }
+
+    	 else {
+
+            var image = data[i].user.profile_image_url; //alert(image);
+
+            var name =  "@"+data[i].user.name;
+
+            var tweetStart = '<li><div class="avatar row"><img src="'+image+'"/><div class="hover"><div class="icon-twitter"></div></div></div>';
+            var tweet = '<div class="bubble-container"><div class="bubble " style="background-color:'+tcol+';"><div class="retweet"><div class="icon-retweet"></div></div><p >'+name+'</p><br>'+data[i].text +'<div class="over-bubble"><div class="icon-mail-reply action"></div><div class="icon-retweet action"></div><div class="icon-star"></div></div></div><div class="arrow"></div></div></li>';
 
         //alert("tweet:::"+tweet);
             var created = parseDate(data[i].created_at);
@@ -231,9 +250,9 @@ function loadLatestTweet(searchval,tweetsnum,cval){
         //alert("date:::"+created);
             var createdDate = created.getDate()+'-'+(created.getMonth()+1)+'-'+created.getFullYear()+' at '+created.getHours()+':'+created.getMinutes();
             tweet = tweet.parseURL().parseUsername().parseHashtag();
-            tweet += '<div class="tweeter-info"><div id="uppercase bold"><a class="white" href="https://twitter.com/#!/CypressNorth" target="_blank" class="black bold"></a></div><div class="left"><a class"white" href="https://twitter.com/#!/CypressNorth/status/'+data[i].id_str+'">'+createdDate+'</a></div></div></div>'
+            tweet += '<div class="tweeter-info"><div id="uppercase bold"><a class="white" href="https://twitter.com/#!/CypressNorth" target="_blank" class="black bold"></a></div><div class="left"><a style="color:#FFFFFF;" href="https://twitter.com/#!/CypressNorth/status/'+data[i].id_str+'">'+createdDate+'</a></div></div></div>'
             $("."+cval).append('<p>'+tweetStart+tweet+'</p>');
-
+    	 }
         //alert(tweet);
 
 

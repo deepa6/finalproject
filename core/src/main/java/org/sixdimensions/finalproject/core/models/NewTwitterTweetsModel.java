@@ -252,14 +252,28 @@ public static Object fetchTimelineTweet(String query, int count) throws IOExcept
 	       
 	        int remainingSerchCount = Integer.parseInt(num);
 	      
-	        if (remainingSerchCount < 1){
-	        	 throw new JSONException("LimtExceeded");
+	       /* if (remainingSerchCount < 1){
+	        	 
+	        	
+	        	 //LOG.debug("inside fetchTimelineTweet tweets exceed condition {}", obj.get("statuses").toString() );
+	        	return "[{'message':'Sorry, Twitter Search limit is exceeded! try after some time','code':34}]";
+	        	//throw new JSONException("LimtExceeded");
+	        	//return "1";
 	          
 	        
-	        }
+	        }*/
 			if (obj != null) {
 				
 				String tweet = obj.get("statuses").toString();
+				
+				if (remainingSerchCount < 1){
+		            	
+		        	 
+					tweet = "[{'message':'Sorry, Twitter Search limit is exceeded! tweets will load in 15 mins!','code':34}]";
+					tweet  =tweet.replace("'","\"");	       
+		        
+		                                    }
+				
 				System.out.println("tweet~~~~~~"+tweet);
 				// LOG.debug("inside fetchTimelineTweet tweets {}", tweet );
 				 try {
@@ -372,15 +386,25 @@ public static Object fetchTimelineTweet1(SlingHttpServletRequest req,String quer
        
         int remainingSerchCount = Integer.parseInt(num);
       
-        if (remainingSerchCount < 1){
-        	 throw new JSONException("LimtExceeded");
-          
-        
-        }
+    
 		if (obj != null) {
 			
 			String tweet = obj.get("statuses").toString();
 			System.out.println("tweet~~~~~~"+tweet);
+			
+		    if (remainingSerchCount < 1){
+	        	// throw new JSONException("LimtExceeded");
+		    	 
+		    
+					try {
+						tweet = NewSaveTweetsModel.readTweets(req,query);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				
+	        }
+		    
 			// LOG.debug("inside fetchTimelineTweet tweets {}", tweet );
 			 try {
 				 String tw = tweet;
@@ -413,7 +437,9 @@ public static Object fetchTimelineTweet1(SlingHttpServletRequest req,String quer
         
     }
 	return endPointUrl;
-}
+}  
+
+
   
 }
 

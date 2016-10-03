@@ -148,15 +148,14 @@ public class NewSaveTweetsModel implements  ReadService {
 		  
 		  else {
 			
-			    NewTwitterTweetsModel.fetchTimelineTweet(req,search,count);
-			    tweStr = readTweets(req,search);
-			    return tweStr;
+			      NewTwitterTweetsModel.fetchTimelineTweet(req,search,count);
+			      tweStr = readTweets(req,search);
+			      return tweStr;
 			    
 		  }
 		}
   
 			 catch(Exception e){
-			 
 			 StringWriter errors = new StringWriter();
 			 e.printStackTrace(new PrintWriter(errors));
 			 return errors.toString();
@@ -167,7 +166,7 @@ public class NewSaveTweetsModel implements  ReadService {
 	}
 	
 	
-	public String scheduleTweets(SlingHttpServletRequest req,String search,int count) throws Exception {
+	/*public String scheduleTweets(SlingHttpServletRequest req,String search,int count) throws Exception {
 		//return search;
 		 String tweStr = null;
 		 
@@ -205,7 +204,7 @@ public class NewSaveTweetsModel implements  ReadService {
 		return tweStr;	
 		
 		
-	}
+	}*/
 
 	@Override
 	public void listTitles() {
